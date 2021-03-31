@@ -1,0 +1,27 @@
+*{
+	margin: 0;
+	padding: 0
+	box-sizing: border-box;
+}
+.two{
+	background: url(12.jpg)center/cover fixed no-repeat;
+	min-height: 100vh;
+}
+.three{
+	text-align: center;
+	text-transform: uppercase;
+	font-family: 'Ultra', sans-serif;
+	text-shadow: 0 2px red, 0 3px #777;
+	color: white; 
+	font-style: italic;
+	font-size: 30px;
+}
+.four, .five{
+	text-align: center;
+	text-transform: uppercase;
+	font-family: 'Ultra', sans-serif;
+	text-shadow: 0 2px red, 0 3px #777;
+	color: white; 
+	font-style: italic;
+	font-size: 30px;
+}

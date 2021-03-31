@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="sam.css">
+	<title></title>
+</head>
+<body>
+	<center>
+	
+		
+		<div class="login-box">
+			<h1 class="line">Signup your account</h1>
+		</br>
+		<form name="myform" action="one.html" onsubmit=" return validpassword()" method="get">
+			<div class="fish">
+				Name: <input type="text" name="name">
+			</div>
+		</br>
+			<div class="fish">
+				Password: <input type="password" name="pass1"><br>
+			</div>
+			</br>
+			<div class="fish">
+				ConfirmPassword:<input type="password" name="pass2">
+			</div>
+			</br>
+			<div class="fish">
+				Phone Number:<input type="number" name="num">
+			</div>
+			</br>
+			<div class="fish">
+				E-Mail: <input type="e-mail" name="mail">
+			</div>
+			</br>
+			<input type="submit" value="SignUp" name="" class="button">
+		</form>
+		</div>
+		</div>
+		
+		
+		<script>
+			function validpassword(){
+				var myname=document.myform.name.value;
+				var password=document.myform.pass1.value;
+				var cpassword=document.myform.pass2.value;
+				var number=document.myform.num.value;
+				if(myname==""){
+					alert("Name should not be empty");
+					return false;
+
+				}
+				else if (password.length<6) {
+					alert("Password must contain 6 characters");
+					return false;
+				}
+				else if (password != cpassword) {
+					alert("Password didnot match")
+					return false;
+				}
+				else if (number.length>10 || number.length<10) {
+					alert("Please enter correct phone number");
+					return false;
+
+				}
+				else{
+					return true;
+				}
+			}
+		</script>
+	</center>
+
+
+</body>
+</html>

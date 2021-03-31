@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="regester.css">
+	<title></title>
+</head>
+<body>
+	<center>
+	
+		
+		<div class="login-box">
+			<h1 class="line">Signup your account</h1>
+		</br>
+		<form name="myform" action="login.html" onsubmit=" return validpassword()" method="get">
+			<div class="fish">
+				Name: <input type="text" name="name" placeholder="enter name">
+			</div>
+		</br>
+		<div class="fish">
+				Address:<input type="text" name="add" placeholder="enter your address">
+			</div>
+			</br>
+
+			<div class="fish">
+				Password: <input type="password" name="pass1" placeholder="enter password"><br>
+			</div>
+			</br>
+			<div class="fish">
+				ConfirmPassword:<input type="password" name="pass2" placeholder="Re-enter your passsword">
+			</div>
+			</br>
+			<div class="fish">
+				Phone Number:<input type="number" name="num" placeholder="Enter your phone number">
+			</div>
+			</br>
+			<div class="fish">
+				Birthdate: <input type="text" name="birth_date" placeholder="year of birth date">
+			</div>
+			</br>
+			<div class="fish">
+				E-Mail: <input type="e-mail" name="mail" placeholder="enter your email id">
+			</div>
+			</br>
+			<input type="submit" value="SignUp" name="" class="button">
+		</form>
+		</div>
+		</div>
+		
+		
+		<script>
+			function validpassword(){
+				var myname=document.myform.name.value;
+				var password=document.myform.pass1.value;
+				var cpassword=document.myform.pass2.value;
+				var number=document.myform.num.value;
+				var email=document.myform.mail.value;
+				var atposition=email.indexOf("@");
+				var dotposition=email.lastIndexOf(".");
+
+				var birth=document.myform.birth_date.value;
+				var today_year = new Date().getFullYear();
+				var current_age=0;
+				current_age=today_year - birth;
+
+				/*var birth_date = document.myform.birth_date.value;
+				var birth_date_day=birth_date.getDate();
+				var birth_date_month = birth_date.getMonth();
+				var birth_date_year = birth_date.getFullYear();
+
+				var today_date = new date();
+				var today_day = today_date.getDate();
+				var today_month = today_date.getMonth();
+				var today_year = today_date.getFullYear();
+				var calculated_age = 0;
+				calculated_age = today_year - birth_date_year;*/
+				if(myname==""){
+					alert("Name should not be empty");
+					return false;
+
+				}
+				else if (password.length<6) {
+					alert("Password must contain 6 characters");
+					return false;
+				}
+				else if (password != cpassword) {
+					alert("Password didnot match")
+					return false;
+				}
+				else if (number.length<1 ) {
+					alert("enter your country code");
+					return false;
+
+				}
+				/*else if(calculated_age<13){
+					alert("age shouldn't be less than 13");
+					return false;
+				}
+				else if (calculated_age>50) {
+					alert("www.helpline.com");
+					return false;
+				}*/
+				else if(current_age<13)
+				{
+					alert("age shouldn't be less than 13");
+					return false;
+				}
+				else if(current_age>50)
+				{
+					g_form.addInfoMessage("<a href='www.google.com' target='_blank'>Google</a>");
+
+					return false;
+				}
+			
+				else if(atposition<1 || dotposition< atposition+2 || dotposition+2>=email.length){
+					alert("please enter valid email");
+
+					return false;
+				}
+
+				else{
+					return true;
+				}
+			}
+		</script>
+	</center>
+
+
+</body>
+</html>

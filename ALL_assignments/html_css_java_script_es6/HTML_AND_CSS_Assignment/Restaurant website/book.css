@@ -1,0 +1,40 @@
+*{
+	margin: 0;
+	padding: 0
+	box-sizing: border-box;
+}
+.two{
+	background: url(3.jpg)center/cover fixed no-repeat;
+	min-height: 100vh;
+}
+.five{
+	position: absolute;
+	left: 900px;
+	display: inline-block;
+	text-decoration: none;
+	text-transform: uppercase;
+	padding: 13px 20px;
+	border-radius: 200px;
+	font-weight: bold;
+	background: black;
+	color: white;
+	cursor: pointer;
+	border: 2px solid white;
+	margin-top: 10px;
+}
+.five:hover{
+	background: white;
+ 	color: orange;
+ 	border: solid orange;
+}
+.three{
+	font-style: italic;
+	text-transform: uppercase;
+	font-size: 30px;
+}
+.six{
+	font-size: 30px;
+}
+.dropdown{
+	font-size: 30px;
+}
